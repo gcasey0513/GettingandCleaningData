@@ -67,4 +67,4 @@ final<-data.table(final)
 summary_dt<- final[, lapply(.SD, mean), by = c("subjectid","activity")]
 
 
-
+write.table(summary_dt, "tidydataset.txt", row.names=FALSE)
